@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.c>
-void ft_memdel(void **ap)
+#include <stdlib.h>
+#include <stdio.h>
+void    ft_memdel(void **ap)
 {
-	if (ap == 0|| *ap == 0)
-		return ;
-	
-	// The paramter is a pointers->addres
-
-
-	free(*ap);
-	*ap = 0;
+    // **ap is the actual value
+    // *ap is the adress of a pointer
+    // ap points to the address of the value
+    if (ap && *ap)
+    {
+        free(*ap);
+        *ap = NULL;
+    }
 }
-
-
