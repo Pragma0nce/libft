@@ -6,7 +6,7 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 08:25:35 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/05/31 08:37:47 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/09 13:57:15 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(char *s, int c)
 {
 	char to_find;
-	const char *result;
+	//const char *result;
 
 	
 	to_find = (char)c;
@@ -26,14 +26,7 @@ char	*ft_strchr(char *s, int c)
 			return (--s);
 		}
 	}
-	if (
+	if (c == 0 && *s == 0)
+		return (s);
 	return (NULL);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	char test[] = "this is mah swamp";
-	printf("%s\n", ft_strchr(test, '\0'));
 }

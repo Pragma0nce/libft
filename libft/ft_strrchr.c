@@ -6,24 +6,23 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 08:47:40 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/05/31 08:58:10 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/09 14:22:22 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(char *s, int c)
-{
-	char to_find;
-	char *ptr;
+#include <string.h>
 
-	to_find = (char) c;
-	*ptr = NULL;
-	while (*s)
+int	ft_strlen(const char *str);
+
+char	*ft_strrchr(char *s, int c)
+{
+	int i;
+
+	i = ft_strlen(s) + 1;
+	while (i--)
 	{
-		if (*s++ == to_find)
-			ptr = s;
+		if (s[i] == (unsigned char)c)
+			return (&s[i]);
 	}
-	if (*s == '\0')
-		return (s);
-	else
-		return (NULL);
+	return (NULL);
 }
