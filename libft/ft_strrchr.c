@@ -6,13 +6,12 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/31 08:47:40 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/09 14:22:22 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/11 13:35:47 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-
-int	ft_strlen(const char *str);
+#include "libft.h"
 
 char	*ft_strrchr(char *s, int c)
 {

@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/11 14:43:27 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/11 14:43:29 by kcoetzee         ###   ########.fr       */
+/*   Created: 2017/05/31 13:23:36 by kcoetzee          #+#    #+#             */
+/*   Updated: 2017/06/11 14:33:08 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include <string.h>
+#include <stdlib.h>
+
+void	*ft_memalloc(size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+	void *memory;
+
+	memory = malloc(size);
+	if (memory == NULL)
+		return (NULL);
+	bzero(memory, size);
+	return (memory);
 }

@@ -6,7 +6,7 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 14:40:50 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/06 13:06:49 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/11 13:24:13 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char *str1;
 	unsigned char *str2;
+
 	if (n == 0)
 		return (0);
 	str1 = (unsigned char *)s1;

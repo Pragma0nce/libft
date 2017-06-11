@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strplit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/11 14:43:27 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/11 14:43:29 by kcoetzee         ###   ########.fr       */
+/*   Created: 2017/06/02 12:54:02 by kcoetzee          #+#    #+#             */
+/*   Updated: 2017/06/02 14:47:10 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include <string.h>
+#include <stdlib.h>
+
+char	**ft_strsplit(char const *s, char c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+	int num_delims;
+	char *new_string;
+
+	num_delims = ft_strcount(s, c);
+	new_string = ft_newstr(ft_strlen(s) - num_delims);
 }

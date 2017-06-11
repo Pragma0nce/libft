@@ -6,7 +6,7 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 10:49:32 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/06 11:46:20 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/11 13:18:43 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*destination++ = *source++;
 	}
 	return (dst);
-}	
+}

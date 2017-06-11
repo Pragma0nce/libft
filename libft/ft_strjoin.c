@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/31 08:59:17 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/11 14:25:25 by kcoetzee         ###   ########.fr       */
+/*   Created: 2017/06/02 11:57:17 by kcoetzee          #+#    #+#             */
+/*   Updated: 2017/06/11 13:08:44 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+char *ft_strnew(int len);
+int	ft_strlen(const char *str);
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char *join;
+	int s1_len;
+	int s2_len;
 	int i;
 	int j;
-	int k;
-	int has_found;
 
-	has_found = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	i = -1;
-	if (ft_strlen(little) == 0)
-		return ((char*)big);
-	while (big[++i] && !has_found)
-	{
-		if (big[i] == *little)
-		{
-			j = 0;
-			k = i;
-			has_found = 1;
-			while (*(little + j))
-				if (little[j++] != big[k++])
-					has_found = 0;
-			if (has_found)
-				return ((char *)big + i);
-		}
-	}
-	return (NULL);
+	j = -1;
+	s1_len = ft_strlen(s1); 
+	s2_len = ft_strlen(s2);
+	join = ft_strnew(s1_len + s2_len);
+	if (!join)
+		return (NULL);
+	while (++i < s1_len)
+		*(join + i) = *(s1 + i);
+	while (++j < s2_len)
+		*(join + i++) = *(s2 + j);
+	return (join);
 }

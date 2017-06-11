@@ -6,15 +6,14 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 15:11:12 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/07 06:21:08 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/11 13:32:16 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-int	ft_strlen(const char *str);
-
-char *ft_strcat(char *s1, const char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int len;
 

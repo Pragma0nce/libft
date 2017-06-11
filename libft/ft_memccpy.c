@@ -6,7 +6,7 @@
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 10:57:02 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/06 11:56:39 by kcoetzee         ###   ########.fr       */
+/*   Updated: 2017/06/11 13:19:36 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,12 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		if (i == *source)
 		{
 			*dest = *source;
-			return (dest+1);
+			return (dest + 1);
 		}
 		else
 		{
 			*dest++ = *source++;
 		}
 	}
-
 	return (NULL);
 }

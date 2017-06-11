@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcoetzee <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/11 14:43:27 by kcoetzee          #+#    #+#             */
-/*   Updated: 2017/06/11 14:43:29 by kcoetzee         ###   ########.fr       */
+/*   Created: 2017/06/11 12:23:08 by kcoetzee          #+#    #+#             */
+/*   Updated: 2017/06/11 14:37:05 by kcoetzee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include <string.h>
+#include <stdlib.h>
+
+void	ft_strdel(char **as)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	else
-		return (c);
+	if (as && *as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }
